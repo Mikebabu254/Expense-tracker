@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 
@@ -14,6 +16,13 @@ class _HomepageState extends State<Homepage> {
         context: context,
         builder: (context) => AlertDialog(
           title: Text("add expense"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextField(),
+              TextField()
+            ],
+          ),
         )
     );
   }
@@ -21,7 +30,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[300],
       floatingActionButton: FloatingActionButton(
         onPressed: AddExpense,
         backgroundColor: Colors.green,
